@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>second try</title>
+<link rel="stylesheet" href="main.css">
+<script src="https://unpkg.com/vue"></script>
+
+<main class="app">
+  <section class="relate" v-for="(section, i) in anime">
+    <a class="anime" v-for="(item, k) in anime[i]" :href="'https://shikimori.org/'+anime[i][k].url" >
+      <div class="img-wrap">
+        <img class="img" :src="'https://shikimori.org/'+anime[i][k].image.original">
+      </div>
+      <div class="title-wrap">
+      <h2 class="title"  >{{anime[i][k].name}}
+      </h2>
+      </div>
+      <span class="episodes">{{anime[i][k].episodes}}</span>
+      <span class="kind">{{anime[i][k].kind}}</span>
+    </a>
+  </section>
+</main>
+
+
+
+
+<script src="list.js"></script>
+<script src="main.js"></script>
